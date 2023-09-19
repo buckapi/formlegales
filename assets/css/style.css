@@ -992,8 +992,8 @@ select.form-control option[value=""][disabled] {
 .wizard-content-item {
   margin: 0 auto;
   max-width: 85%;
-  padding-top: 90px;
-  padding-bottom: 68px;
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 .wizard-content-item h2 {
   font-size: 43px;
@@ -1224,7 +1224,7 @@ select.form-control option[value=""][disabled] {
 
 .identity-option {
   margin: 0 auto;
-  max-width: 1025px;
+  max-width: 90%;
 }
 .identity-option ul {
   padding: 0px -15px;
