@@ -991,7 +991,7 @@ select.form-control option[value=""][disabled] {
 
 .wizard-content-item {
   margin: 0 auto;
-  max-width: 855px;
+  max-width: 85%;
   padding-top: 90px;
   padding-bottom: 68px;
 }
@@ -1010,7 +1010,7 @@ select.form-control option[value=""][disabled] {
 
 .wizard-form-field {
   margin: 0 auto;
-  max-width: 1095px;
+  max-width: 90%;
 }
 .wizard-form-field input, .wizard-form-field select {
   width: 100%;
@@ -1052,7 +1052,8 @@ select.form-control option[value=""][disabled] {
 
 .wizard-option-list {
   margin: 0 auto;
-  max-width: 920px;
+  max-width: 90%;
+    padding-top: 20px;
 }
 .wizard-option-list ul {
   margin: 0px -15px;
@@ -1189,7 +1190,7 @@ select.form-control option[value=""][disabled] {
 
 .wizard-identity {
   margin: 0 auto;
-  max-width: 850px;
+  max-width: 90%;
 }
 .wizard-identity .wizard-identity-box {
   height: 310px;
@@ -1284,8 +1285,8 @@ select.form-control option[value=""][disabled] {
 .n-summary {
   height: 80px;
   padding-left: 30px;
-  line-height: 80px;
-  background-color: #ddeef9;
+  line-height: 37px;
+/*  background-color: #ddeef9;*/
 }
 .n-summary span {
   color: #5756a2;
