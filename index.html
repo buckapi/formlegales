@@ -38,6 +38,7 @@
 						<button class="multisteps-form__progress-btn">2</button>
 						<button class="multisteps-form__progress-btn">3 </button>
 						<button class="multisteps-form__progress-btn">4 </button>
+						<button class="multisteps-form__progress-btn">5 </button>
 					</div>
 				</div>
 			</div>
@@ -51,7 +52,7 @@
 							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>1 of 6 Completed</span>
+										<span>1 of 6 Completedo</span>
 										<div class="progress">
 											<div class="progress-bar">
 											</div>
@@ -82,7 +83,7 @@
 									
 									<div class="actions">
 										<ul>
-											<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
 										</ul>
 									</div>
 								</div>
@@ -92,7 +93,7 @@
 							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>2 of 6 Completed</span>
+										<span>2 of 6 Completedo</span>
 										<div class="progress">
 											<div class="progress-bar">
 											</div>
@@ -107,14 +108,14 @@
 									<div class="wizard-form-field">
 										<div class="row">
 											<div class="col-md-6">
-												<div class="badge-selection">
-													<h3>¿Que tipo de cliente eres?</h3>
+												<div class="n-summary">
+													<span>¿Que tipo de cliente eres?</span>
 													<label>
 														<input type="radio" checked="checked" name="radio">
 														<span class="checkmark">Nuevo</span>
 													</label>
 													<label>
-														<input type="radio" name="radio">
+														<input type="radio" checked="checked" name="radio">
 														<span class="checkmark">Existente</span>
 													</label>
 												</div>
@@ -662,8 +663,8 @@
 									</div>
 									<div class="actions">
 										<ul>
-											<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> Atras</span></li>
-											<li><span class="js-btn-next" title="NEXT">Sig <i class="fa fa-arrow-right"></i></span></li>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
 										</ul>
 									</div>
 								</div>
@@ -674,7 +675,7 @@
 							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>3 of 5 Completed</span>
+										<span>3 of 6 Completedo</span>
 										<div class="progress">
 											<div class="progress-bar" style="width: 65%;"></div>
 										</div>
@@ -726,7 +727,7 @@
 							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>4 of 6 Completed</span>
+										<span>4 of 6 Completedo</span>
 										<div class="progress">
 											<div class="progress-bar" style="width: 65%;"></div>
 										</div>
@@ -738,53 +739,39 @@
 								</div>
 								<div class="wizard-identity wizard-content-form">
 									<div class="row">
-										<div class="col-md-12">
-											<div class="wizard-form-input position-relative form-group has-float-label">
-												<p style="padding-bottom: 20px;">Conozcamonos mejor. Cuentenos una breve descripción de su actividad laboral o trabajo,  cual es el calculo de sus ingresos mensuales y por cuanto tiempo se dedica a esto.</p>
-												<input type="text" class="form-control" name="laboral" placeholder="Texto" style="height: 100px;">
-												<label>Texto</label>
+										<div class="col-md-12 wizard-identity wizard-content-form">
+												<h4 style="padding-bottom: 20px;">Conozcamonos mejor. Cuentenos una breve descripción de su actividad laboral o trabajo,  cual es el calculo de sus ingresos mensuales y por cuanto tiempo se dedica a esto.</h4>
+										
+												<!-- <label>Escriba aqui</label> -->
+												<input type="text" class="form-control" name="laboral" placeholder="Escriba aqui" style="height: 100px;">
+												
+											
+										</div>
+									</div>
+								</div>
+								<div class="wizard-identity wizard-content-form" style="padding-top: 25px">
+									<div class="row">
+										<div class="col-md-12 wizard-identity wizard-content-form">
+											<h2 style="text-center">DECLARACIÓN DE ORIGEN DE FONDOS</h2>
+										</div>
+										<div class="wizard-identity wizard-content-form">
+											<h3>Las partes aquí  declaran bajo la gravedad del juramento que sus ingresos provienen de actividades licitas, que no se encuentran con registro negativo en listados de prevención de lavado de activos nacionales o internacionales, que no se encuentran dentro de una de las dos categorías de lavado de activos (conversión o movimiento) y que, en consecuencia, se obligan a responder a la otra parte por todos los perjuicios que se llegaren a causar como consecuencia de esta afirmación. En igual sentido responderá ante terceros. Declaran igualmente, que sus conductas se ajustan a la ley y a la ética. 
+											</h3>
+										</div> 
+										<div class="col-md-12 wizard-identity wizard-content-form" style="padding-top:25px; text-align: right;">
+											<div class="taxable-area">
+												<div class="row">
+														<label>
+															<input type="checkbox" class="tax-check" checked value="Declaración de ingresos">
+															<span class="checkbo-box-border"></span>
+															<span class="texable-option">
+																Declaro bajo juramento
+															</span>
+														</label>
+												</div>
 											</div>
 										</div>
-										<!--<div class="col-md-6">
-											<div class="wizard-identity-box identity-upload text-center">
-												<div class="upload-icon">
-													<i class="fas fa-cloud-upload-alt"></i>
-												</div>
-												 <div class="upload-option text-center">
-													<label for="file-images">Upload The Documents</label>
-													<input id="file-images" style="visibility:hidden; display: none;" type="file">
-													<span>.jpg or .pdf should
-													be more than 500KB or 300PI</span>
-												</div>
-											</div>
-										</div> -->
-										<!-- <div class="col-md-6">
-											<div class="wizard-identity-box text-center">
-												<div class="wizard-identity-icon">
-													<img src="assets/img/vi1.png" alt="">
-												</div>
-											</div>
-										</div> -->
-
-										 
 									</div>
-									<h2>DECLARACIÓN DE ORIGEN DE FONDOS</h2>
-											
-									<div class="wizard-identity wizard-content-form">
-										<h3>Las partes aquí  declaran bajo la gravedad del juramento que sus ingresos provienen de actividades licitas, que no se encuentran con registro negativo en listados de prevención de lavado de activos nacionales o internacionales, que no se encuentran dentro de una de las dos categorías de lavado de activos (conversión o movimiento) y que, en consecuencia, se obligan a responder a la otra parte por todos los perjuicios que se llegaren a causar como consecuencia de esta afirmación. En igual sentido responderá ante terceros. Declaran igualmente, que sus conductas se ajustan a la ley y a la ética. 
-										</h3>
-											
-											
-												<div class="n-activity">
-													<label>
-														<span class="n-title">Declaro bajo juramento</span>
-														<input type="checkbox" class="net-check">
-														<span class="net-check-border"></span>
-													</label>
-												</div>
-											
-									
-									</div> 
 								</div>
 								<div class="wizard-footer">
 									<div class="wizard-imgbg">
@@ -792,114 +779,71 @@
 									</div>
 									<div class="actions">
 										<ul>
-											<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK</span></li>
-											<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!--single form panel-->
-						<div class="multisteps-form__panel" data-animation="slideVert">
+						<div class="multisteps-form__panel " data-animation="slideVert">
 							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>4 of 5 Completed</span>
+										<span>5 of 6 Completedo</span>
 										<div class="progress">
-											<div class="progress-bar" style="width: 85%;"></div>
+											<div class="progress-bar">
+											</div>
 										</div>
 									</div>
 								</div>
 								<div class="wizard-content-item text-center">
-									<h2>Referencias</h2>
-									
+									<h2>Referencias personales</h2>
+									<p>Ingrese 3 referencias</p>
 								</div>
-								<div class="identity-option wizard-content-form">
+								<div class="wizard-content-form">
 									<div class="wizard-form-field">
+																			
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" name="name" class="form-control" placeholder="Referencia 1">
-											<label>Nombre completo, telefono, correo, ciudad</label>
+											<input type="text" name="name" class="form-control" placeholder="Nombre completo">
+											<label>Nombre completo</label>
+										</div>
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+											<label>Correo electrónico</label>
+										</div>
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="text" class="form-control" name="email" placeholder="Telefono">
+											<label>Telefono</label>
+										</div>
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="text" class="form-control" name="email" placeholder="Telefono">
+											<label>Ciudad</label>
 										</div>
 									</div>
-									<div class="wizard-form-field">
-										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" name="name" class="form-control" placeholder="Referencia 2">
-											<label>Nombre completo, telefono, correo, ciudad</label>
-										</div>
-									</div>
-									<div class="wizard-form-field">
-										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" name="name" class="form-control" placeholder="Referencia 3">
-											<label>Nombre completo, telefono, correo, ciudad</label>
-										</div>
-									</div>
-									<!-- <ul>
-										<li>
-											<label>
-												<input type="checkbox" class="identity-check" checked="checked">
-												<span class="identity-label"></span>si
-												<span class="checkmark-border"></span>
-											</label>
-										</li>
-										<li>
-											<label>
-												<input type="checkbox" class="identity-check">
-												<span class="identity-label"></span>no
-												<span class="checkmark-border"></span>
-											</label>
-										</li>
-										<li>
-											<label>
-												<input type="checkbox" class="identity-check">
-												<span class="identity-label"></span>Investability Quotient Percentile
-												<span class="checkmark-border"></span>
-											</label>
-										</li>
-										<li>
-											<label>
-												<input type="checkbox" class="identity-check">
-												<span class="identity-label"></span>Investability Quotient Percentile
-												<span class="checkmark-border"></span>
-											</label>
-										</li>
-										<li>
-											<label>
-												<input type="checkbox" class="identity-check">
-												<span class="identity-label"></span>Investability Quotient Percentile
-												<span class="checkmark-border"></span>
-											</label>
-										</li>
-										<li>
-											<label>
-												<input type="checkbox" class="identity-check">
-												<span class="identity-label"></span>Investability Quotient Percentile
-												<span class="checkmark-border"></span>
-											</label>
-										</li>
-									</ul>
- -->								</div>
+								</div>
 								<div class="wizard-footer">
 									<div class="wizard-imgbg">
-										<img src="assets/img/v4.png" alt="">
+										<img src="assets/img/v3.png" alt="">
 									</div>
 									<div class="actions">
 										<ul>
-											<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK</span></li>
-											<li><span class="js-btn-next" title="NEXT">NEXT <i class="fa fa-arrow-right"></i></span></li>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
 										</ul>
 									</div>
 								</div>
-
 							</div>
 						</div>
-						<!--single form panel-->
-						<div class="multisteps-form__panel" data-animation="slideVert">
+						<div class="multisteps-form__panel " data-animation="slideVert">
 							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>5 of 5 Completado</span>
+										<span>6 of 6 Completedo</span>
 										<div class="progress">
-											<div class="progress-bar" style="width: 100%;"></div>
+											<div class="progress-bar">
+											</div>
 										</div>
 									</div>
 								</div>
@@ -907,101 +851,49 @@
 									<h2>Declaración y comentarios</h2>
 									
 								</div>
-								<div class="wizard-submit-file-content wizard-content-form">
+								<div class="wizard-identity wizard-content-form">
 									<div class="row">
-										<div class="col-md-12">
-											<div class="n-summary">
-												<span> 									El suministro de información falsa en la presente solicitud incurre en el delito de falsedad en documento privado de acuerdo con los artículos 289 y 290 del C.P.C.</span>
-												<label>
-													<input type="radio" checked="checked" name="radio">
-													<span class="checkmark">SI</span>
-												</label>
-												<label>
-													<input type="radio" checked="checked" name="radio">
-													<span class="checkmark">NO</span>
-												</label>
-											</div>
+										<div class="col-md-12 wizard-identity wizard-content-form">
+												<h4 style="padding-bottom: 20px;">El suministro de información falsa en la presente solicitud incurre en el delito de falsedad en documento privado de acuerdo con los artículos 289 y 290 del C.P.C.</h4>
+										
 										</div>
-										<!-- <div class="col-md-6">
-											<div class="n-activity tooltip-info">
-												<label>
-													<i data-toggle="tooltip" data-placement="bottom" title="If you want your invoice address to a compnay. Leave blank to use full name" class="fa fa-info"></i>
-													<input type="checkbox" class="net-check">
-													<span class="n-title">Network Activity</span>
-													<span class="net-check-border"></span>
-												</label>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="n-checked">
-												<span>Daily Creative Challenge</span>
-												<label>
-													<input type="radio" value="Daily Creative Challenge">
-													<span class="checkmark">Announcements and special offers </span>
-												</label>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="n-checked">
-												<span>Daily Creative Challenge</span>
-												<label>
-													<input type="radio" value="Notification">
-													<span class="checkmark">Talent Notifications</span>
-												</label>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="n-select-option">
-												<select>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="n-select-option">
-												<select>
-													<option>Talent Notifications</option>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-												</select>
-											</div>
-										</div>-->
-										<div class="col-md-12" style="padding-top:10px;">
-											<div class="wizard-form-input position-relative form-group has-float-label">
-														<input type="name" class="form-control" name="email" placeholder="Preguntas y comentario">
-														<label>Preguntas y comentarios</label>
-													</div>
-											<!-- <div class="n-select-option">
-												<h3></h3>
-												<select>
-													<option>Support for months</option>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-													<option>Give Hours</option>
-												</select>
-											</div> -->
-										</div> 
 									</div>
 								</div>
-								
+								<!-- <div class="badge-selection">
+										<label>
+											<input type="radio" checked="checked" name="radio">
+											<span class="checkmark">SI</span>
+										</label>
+										<label>
+											<input type="radio" name="radio">
+											<span class="checkmark">NO</span>
+										</label>
+								</div> -->
+								<div class="wizard-content-item text-center">
+									<h2>Inquietudes</h2>
+									
+								</div>
+								<div class="wizard-content-form">
+									<div class="wizard-form-field">		
+										<div class="wizard-form-input position-relative form-group has-float-label">
+											<input type="text" name="name" class="form-control" placeholder="Escriba aqui alguna pregunta o comentario">
+											<label>Escriba aqui alguna pregunta o comentario</label>
+										</div>
+									</div>
+								</div>
 								<div class="wizard-footer">
-									<div class="wizard-imgbg float-left">
-										<img src="assets/img/v5.png" alt="">
+									<div class="wizard-imgbg">
+										<img src="assets/img/v3.png" alt="">
 									</div>
 									<div class="actions">
 										<ul>
-											<li><span class="js-btn-prev" title="BACK"><i class="fa fa-arrow-left"></i> BACK</span></li>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
 											<li><button type="submit" id="submit-form" title="NEXT">SUMBIT <i class="fa fa-arrow-right"></i></button></li>
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
-
 					</form>
 				</div>
 			</div>
