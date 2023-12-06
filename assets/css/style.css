@@ -88,7 +88,14 @@ section {
 
 button {
   cursor: pointer;
+ 
+    background-color: #ddeef9;
+    padding: 10px;
+    
+    margin-bottom: 10px;
 }
+
+
 
 .form-control:focus,
 button:visited,
@@ -189,7 +196,7 @@ h6 {
   max-width: 1620px;
   margin: 80px auto;
   border-radius: 20px;
-  background-color: #f1f9fe;
+  background-color: #13263e00;
   -webkit-box-shadow: 0px 5px 62px 0px rgba(0, 0, 0, 0.19);
           box-shadow: 0px 5px 62px 0px rgba(0, 0, 0, 0.19);
 }
@@ -225,16 +232,16 @@ h6 {
   border: 2px solid #e3e3e3;
 }
 .steps li.first a {
-  border: 2px solid #5756a2;
+  border: 2px solid #13263e;
 }
 .steps li.checked a, .steps li.current a {
-  border: 2px solid #5756a2;
+  border: 2px solid #13263e;
 }
 .steps li.checked a:after, .steps li.current a:after {
   top: 0;
   left: 13px;
   font-size: 20px;
-  color: #5756a2;
+  color: #13263e;
   content: "";
   font-weight: 900;
   position: absolute;
@@ -291,9 +298,10 @@ h6 {
 .form-control {
   height: 37px;
   border: none;
-  border-bottom: 2px solid #e6e6e6;
+  border-bottom: 2px solid #2f3146;
   width: 100%;
   color: #666;
+  background-color: #bfb26cd1;
 }
 .form-control:focus {
   border-color: #e9e0cf;
@@ -333,8 +341,8 @@ select.form-control option[value=""][disabled] {
   font-weight: 500;
   line-height: 55px;
   text-align: center;
-  background-color: #5756a2;
-  border: 2px solid #5756a2;
+  background-color: #13263e;
+  border: 2px solid #13263e;
   cursor: pointer;
 }
 .actions li span i,
@@ -342,9 +350,9 @@ select.form-control option[value=""][disabled] {
   position: relative;
 }
 .actions li:first-child span, .actions li:first-child button {
-  color: #8a8a8a;
+  color: #132640;
   background-color: #d3d3d600;
-  border-color: #c6e0fd;
+  border-color: #182651;
   border-radius: 3px;
 }
 .actions li:first-child span i, .actions li:first-child button i {
@@ -355,11 +363,11 @@ select.form-control option[value=""][disabled] {
   left: inherit !important;
 }
 .actions li:last-child span {
-  background-color: #5756a2;
-  color: #fff;
+  background-color: #bfb26c;
+  color: #182651;
 }
 .actions li:last-child span:hover {
-  background-color: #5756a2;
+  background-color: #bfb26c;
 }
 .actions li[aria-disabled=true] a {
   opacity: 0;
@@ -368,11 +376,11 @@ select.form-control option[value=""][disabled] {
   transition: all 1s;
 }
 .actions li[aria-disabled=false] ~ li a {
-  background-color: #5756a2;
+  background-color: #13263e;
   color: #fff;
 }
 .actions li[aria-disabled=false] ~ li a:hover {
-  background-color: #5756a2;
+  background-color: #13263e;
 }
 
 .checkbox-tick label {
@@ -492,8 +500,8 @@ select.form-control option[value=""][disabled] {
           justify-content: center;
 }
 .has-float-label i:hover {
-  background: #5756a2;
-  border-color: #5756a2;
+  background: #13263e;
+  border-color: #13263e;
   color: #fff;
 }
 .has-float-label i + input, .has-float-label .wizard-form-field i + select, .wizard-form-field .has-float-label i + select {
@@ -579,7 +587,7 @@ select.form-control option[value=""][disabled] {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  color: #5756a2;
+  color: #13263e;
 }
 .has-float-label .form-control::-moz-placeholder {
   opacity: 1;
@@ -587,7 +595,7 @@ select.form-control option[value=""][disabled] {
   -o-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
-  color: #5756a2;
+  color: #13263e;
 }
 .has-float-label .form-control:-ms-input-placeholder {
   opacity: 1;
@@ -595,14 +603,14 @@ select.form-control option[value=""][disabled] {
   -o-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
-  color: #5756a2;
+  color: #13263e;
 }
 .has-float-label .form-control::placeholder {
   opacity: 1;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  color: #5756a2;
+  color: #13263e;
 }
 .has-float-label .form-control:focus::-webkit-input-placeholder {
   color: transparent;
@@ -660,8 +668,8 @@ select.form-control option[value=""][disabled] {
           justify-content: center;
 }
 .tooltip-info i:hover {
-  background: #5756a2;
-  border-color: #5756a2;
+  background: #13263e;
+  border-color: #13263e;
   color: #fff;
 }
 .tooltip-info span, .tooltip-info input[type=text], .tooltip-info .wizard-form-field select[type=text], .wizard-form-field .tooltip-info select[type=text] {
@@ -710,7 +718,7 @@ select.form-control option[value=""][disabled] {
 
 .tooltip-inner {
   max-width: 280px;
-  background-color: #5756a2;
+  background-color: #13263e;
   border-radius: 0;
 }
 
@@ -723,8 +731,8 @@ select.form-control option[value=""][disabled] {
 }
 
 .tooltip .arrow:before {
-  border-bottom-color: #5756a2;
-  border-top-color: #5756a2;
+  border-bottom-color: #13263e;
+  border-top-color: #13263e;
 }
 
 /*---------------------------------------------------- */
@@ -803,12 +811,12 @@ select.form-control option[value=""][disabled] {
   display: none;
 }
 .multisteps-form__progress-btn.js-active {
-  color: #6b4cf9;
+  color: #bfb26c;
 }
 .multisteps-form__progress-btn.js-active:before {
-  border-color: #6b4cf9;
+  border-color: #bfb26c;
   font-size: 20px;
-  color: #6b4cf9;
+  color: #bfb26c;
   content: "";
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
@@ -930,7 +938,7 @@ select.form-control option[value=""][disabled] {
 }
 
 .wizard-part-title h3 {
-  color: #5756a2;
+  color: #13263e;
   font-size: 50px;
   font-weight: 700;
   text-align: left;
@@ -954,7 +962,7 @@ select.form-control option[value=""][disabled] {
 .badge-selection h3 {
   font-size: 20px;
   font-weight: 500;
-  color: #5756a2;
+  color: #13263e;
 }
 .badge-selection span {
   top: -5px;
@@ -986,22 +994,22 @@ select.form-control option[value=""][disabled] {
   height: 18px;
   position: absolute;
   border-radius: 80px;
-  background-color: #5756a2;
+  background-color: #bfb26c;
 }
 
 .wizard-content-item {
   margin: 0 auto;
-  max-width: 85%;
+  max-width: 100%;
   padding-top: 5px;
   padding-bottom: 20px;
 }
 .wizard-content-item h2 {
   font-size: 43px;
-  color: #5756a2;
+  color: #13263e;
   font-weight: 700;
 }
 .wizard-content-item p {
-  color: #5756a2;
+  color: #13263e;
   font-size: 33px;
   font-weight: 600;
   line-height: 1.2;
@@ -1023,11 +1031,11 @@ select.form-control option[value=""][disabled] {
   -webkit-transition: 0.3s all ease-out;
   -o-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
-  background-color: #ddeef9;
-  border: 2px solid #ddeef9;
+  background-color: #bfb26cb8;
+  border: 2px solid #13263e;
 }
 .wizard-form-field input:focus, .wizard-form-field select:focus {
-  border: 2px solid #5756a2;
+  border: 2px solid #13263e;
   background-color: transparent;
 }
 .wizard-form-field select {
@@ -1084,7 +1092,7 @@ select.form-control option[value=""][disabled] {
 .wizard-option-list li .option-item-list select {
   width: 100%;
   height: 83px;
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
   padding-left: 60px;
@@ -1093,10 +1101,10 @@ select.form-control option[value=""][disabled] {
   -webkit-appearance: none;
 }
 .wizard-option-list li.active:before {
-  color: #5756a2;
+  color: #13263e;
 }
 .wizard-option-list li.active .option-item-list select {
-  border: 2px solid #5756a2;
+  border: 2px solid #13263e;
 }
 .wizard-option-list li.no-arrow:after {
   display: none;
@@ -1119,7 +1127,7 @@ select.form-control option[value=""][disabled] {
 .wizard-option-list .upload-araa .upload-text span {
   display: inline-block;
   padding: 23px 30px;
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
 }
@@ -1132,7 +1140,7 @@ select.form-control option[value=""][disabled] {
 }
 .wizard-option-list .upload-araa .upload-option label {
   margin-bottom: 0;
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
 }
@@ -1151,7 +1159,7 @@ select.form-control option[value=""][disabled] {
 .wizard-option-list .taxable-area .checkbo-box-border:before {
   top: 6px;
   left: 10px;
-  color: #5756a2;
+  color: #13263e;
   content: "";
   font-size: 16px;
   font-weight: 900;
@@ -1173,7 +1181,7 @@ select.form-control option[value=""][disabled] {
 }
 .wizard-option-list .texable-option {
   top: 10px;
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
   padding-left: 50px;
@@ -1206,7 +1214,7 @@ select.form-control option[value=""][disabled] {
 .wizard-identity .upload-option label {
   font-size: 25px;
   font-weight: 600;
-  color: #5756a2;
+  color: #13263e;
   margin-bottom: 0;
 }
 .wizard-identity .upload-option span {
@@ -1232,7 +1240,7 @@ select.form-control option[value=""][disabled] {
 .identity-option li {
   width: 45%;
   height: 80px;
-  color: #5756a2;
+  color: #13263e;
   margin: 0 15px;
   font-size: 20px;
   line-height: 80px;
@@ -1289,7 +1297,7 @@ select.form-control option[value=""][disabled] {
 /*  background-color: #ddeef9;*/
 }
 .n-summary span {
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
 }
@@ -1320,7 +1328,7 @@ select.form-control option[value=""][disabled] {
   border: 2px solid transparent;
 }
 .n-activity.checked {
-  border: 2px solid #5756a2;
+  border: 2px solid #13263e;
   background: transparent;
 }
 .n-activity label {
@@ -1351,13 +1359,13 @@ select.form-control option[value=""][disabled] {
   position: absolute;
   height: 40px;
   width: 40px;
-  border: 2px solid #5756a2;
+  border: 2px solid #13263e;
 }
 .n-activity label .net-check:checked ~ .net-check-border:before {
   display: block;
 }
 .n-activity .n-title {
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
   text-align: left;
@@ -1371,7 +1379,7 @@ select.form-control option[value=""][disabled] {
 }
 .n-checked span {
   display: block;
-  color: #5756a2;
+  color: #13263e;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 5px;
@@ -1389,12 +1397,12 @@ select.form-control option[value=""][disabled] {
 .n-select-option select {
   width: 100%;
   height: 83px;
-  color: #5756a2;
-  font-size: 20px;
+  color: #13263e;
+  font-size: 15px;
   font-weight: 500;
   padding-left: 30px;
-  border: 2px solid #c3e8ff;
-  background-color: #ddeef9;
+  border: 2px solid #13263e;
+  background-color: #bfb26cb8;
   -webkit-appearance: none;
 }
 .n-select-option:after {
@@ -1568,7 +1576,7 @@ select.form-control option[value=""][disabled] {
   }
 
   .wizard-content-item h2 {
-    font-size: 36px;
+    font-size: 25px;
   }
 
   .wizard-content-item {
@@ -1582,6 +1590,16 @@ select.form-control option[value=""][disabled] {
   .wizard-identity {
     padding: 0px 30px;
   }
+  @media screen and (max-width: 767px){
+    .wizard-identity {
+    padding: 0px 0px;
+    text-align: initial;
+  }
+  h3 {
+    font-size: 1rem;}
+  h2 {
+    font-size: 1.75rem;}
+}
 
   .identity-option li {
     width: 100%;
@@ -1672,4 +1690,41 @@ select.form-control option[value=""][disabled] {
     margin-left: 0;
   }
 }
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wizard-form-input {
+    flex: 1; /* Hace que cada campo ocupe el mismo espacio */
+    margin-right: 10px; /* Espacio entre los campos */
+}
+
+.wizard-form-input:last-child {
+    margin-right: 0; /* Elimina el margen del último elemento para evitar desbordamiento */
+}
+
+/* Estilos para pantallas pequeñas (por ejemplo, dispositivos móviles) */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column; /* Apila los campos verticalmente */
+    }
+
+    .wizard-form-input {
+        margin-right: 0; /* Elimina el margen entre campos en vista móvil */
+        margin-bottom: 10px; /* Agrega espacio entre campos apilados */
+    }
+
+    .wizard-form-input:last-child {
+        margin-bottom: 0; /* Elimina el margen extra del último elemento */
+    }
+}
+
+
+
 /*---------------------------------------------------- */

@@ -46,7 +46,7 @@
 			<div class="row">
 				<div class="col-12 col-lg-12 m-auto">
 					<!-- <form class="multisteps-form__form clearfix" action="index.html#" method="post" id="wizard"> -->
-						 <form class="multisteps-form__form clearfix" action="#" method="post" id="wizard">
+					<form class="multisteps-form__form clearfix" action="#" method="post" id="wizard">
 	
 						<!--single form panel-->
 						<div class="multisteps-form__panel js-active" data-animation="slideVert">
@@ -61,7 +61,7 @@
 									</div>
 								</div>
 								<div class="wizard-content-item text-justify">
-									<h2>Aplicación de Servicio AUTORIZACIÓN</h2>
+									<h2 style="text-align: center;">Aplicación de Servicio AUTORIZACIÓN</h2>
 									<p>TRATAMIENTO DE DATOS PERSONALES Y CENTRALES DE INFORMACIÓN Declaro que para efectos de acceder a la prestación de servicios por parte de REALTY & LEGAL
 									INDUSTRY S.A.S, el suscrito ha suministrado datos personales y este como
 									responsable en cumplimiento de las disposiciones de la Ley 1581 de 2012 y demás
@@ -140,14 +140,17 @@
 										
 										<div class="wizard-form-input position-relative form-group has-float-label">
 											<input type="text" name="name" class="form-control" placeholder="Nombre completo">
+											
 											<label>Nombre completo</label>
 										</div>
 										<div class="wizard-form-input position-relative form-group has-float-label">
 											<input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+											
 											<label>Correo electrónico</label>
 										</div>
 										<div class="wizard-form-input position-relative form-group has-float-label">
 											<input type="text" class="form-control" name="phone" placeholder="Telefono">
+											
 											<label>Telefóno</label>
 										</div>
 										<div class="row">
@@ -323,13 +326,17 @@
 									<p>Ingrese 3 referencias</p>
 								</div>
 								<div class="wizard-content-form" id="referenceFields">
-									<div class="wizard-form-field">
+									<div class="wizard-form-input position-relative form-group has-float-label">
+											
 																			
 										<!-- aqui van los campos del script| -->
 									</div>
 								</div>
-								<button type="button" id="addReferenceButton" >+
-									Referencia</button>
+								
+										<!-- <button type="button" id="addReferenceButton" style="top:"><span class="button" >Referencia <i class="fa fa-plus"></i></span></button> -->
+									
+
+
 								<div class="wizard-footer">
 									<div class="wizard-imgbg">
 										<img src="assets/img/v3.png" alt="">
@@ -395,7 +402,7 @@
 									<div class="actions">
 										<ul>
 											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
-											<li><button type="submit" id="submit-form" title="NEXT">SUMBIT <i class="fa fa-arrow-right"></i></button></li>
+											<li><button type="submit" id="submit-form" title="NEXT">Enviar <i class="fa fa-arrow-right"></i></button></li>
 										</ul>
 									</div>
 								</div>
@@ -423,24 +430,37 @@
 		function addReferenceField() {
 			var container = document.getElementById('referenceFields');
 			var referenceHTML = `
+
 		<div class="wizard-form-field">
-		  <div class="wizard-form-input position-relative form-group has-float-label">
-			<input type="text" name="referenceName[]" class="form-control" placeholder="Nombre completo" required>
-			<label>Nombre completo</label>
-		  </div>
-		  <div class="wizard-form-input position-relative form-group has-float-label">
-			<input type="text" name="referencePhone[]" class="form-control" placeholder="Teléfono" required>
-			<label>Teléfono</label>
-		  </div>
-		  <div class="wizard-form-input position-relative form-group has-float-label">
-			<input type="email" name="referenceEmail[]" class="form-control" placeholder="Correo electrónico" required>
-			<label>Correo electrónico</label>
-		  </div>
-		  <div class="wizard-form-input position-relative form-group has-float-label">
-			<input type="text" name="referenceAddress[]" class="form-control" placeholder="Dirección" required>
-			<label>Dirección</label>
-		  </div>
-		  <button type="button" onclick="removeReferenceField(this)">Eliminar</button>
+			<div class="form-row">
+		        <div class="wizard-form-input position-relative form-group has-float-label">
+		            <input type="text" name="referenceName[]" class="form-control" placeholder="Nombre completo" required>
+		            <label>Nombre completo</label>
+		        </div>
+		        <div class="wizard-form-input position-relative form-group has-float-label">
+		            <input type="text" name="referencePhone[]" class="form-control" placeholder="Teléfono" required>
+		            <label>Teléfono</label>
+		        </div>
+		    </div>
+		  <div class="form-row">
+	        <div class="wizard-form-input position-relative form-group has-float-label">
+	            <input type="email" name="referenceEmail[]" class="form-control" placeholder="Correo electrónico" required>
+	            <label>Correo electrónico</label>
+	        </div>
+	        <div class="wizard-form-input position-relative form-group has-float-label">
+	            <input type="text" name="referenceAddress[]" class="form-control" placeholder="Dirección" required>
+	            <label>Dirección</label>
+	        </div>
+	    </div>
+		<div class="row">
+			<div class="col-md-3">
+		  			<button type="button" onclick="removeReferenceField(this)"> Eliminar <i class="fa fa-minus"></i></button>
+		  	</div>
+		  	<div class="col-md-3">
+		  			<button type="button" id="addReferenceButton" style="top:"><span class="button" >Referencia <i class="fa fa-plus"></i></span></button>
+		  	</div>
+		</div>
+		  
 		</div>
 	  `;
 			container.insertAdjacentHTML('beforeend', referenceHTML);
@@ -455,11 +475,90 @@
 	</script>
 	<script>
 	document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('wizard');
+  	const form = document.getElementById('wizard');
   
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+  	function validarFormulario() {
+  		let esValido = true;
+	  		if (form['name'].value.trim() === '') {
+		        document.getElementById('error-name').innerText = 'Por favor, ingresa tu nombre.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-name').innerText = '';
+		    }
+		    if (form['email'].value.trim() === '') {
+		        document.getElementById('error-email').innerText = 'Por favor, ingresa un correo valido.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-email').innerText = '';
+		    }
+		    if (form['phone'].value.trim() === '') {
+		        document.getElementById('error-phone').innerText = 'Por favor, ingresa un telefóno valido.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-phone').innerText = '';
+		    }
+		    if (form['serviceType'].value.trim() === '') {
+		        alert('Por favor, selecciona un tipo de servicio.');
+		        return false;
+		    }
+		    if (!form['clientType'].value.trim()) {
+		        document.getElementById('error-clientType').innerText = 'Por favor, selecciona un tipo de cliente.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-clientType').innerText = '';
+		    }
+		    if (form['identityType'].value.trim() === '') {
+		    	document.getElementById('error-identityType').innerText = 'Por favor, selecciona un tipo de documento de identidad.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-identityType').innerText = '';
+		    }
+		    if (form['documentNumber'].value.trim() === '') {
+		    	document.getElementById('error-documentNumber').innerText = 'Por favor, ingresa tu número de documento.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-documentNumber').innerText = '';
+		    }
+		    if (form['expeditionPlace'].value.trim() === '') {
+		    	document.getElementById('error-expeditionPlace').innerText = 'Por favor, ingresa el lugar de expedición de tu documento.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-expeditionPlace').innerText = '';
+		    }
+		    if (form['labor'].value.trim() === '') {
+		    	document.getElementById('error-labor').innerText = 'Por favor, describe tu actividad laboral.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-labor').innerText = '';
+		    }
+		    if (!form['incomeStatement'].checked) {
+		    	document.getElementById('error-incomeStatement').innerText = 'Por favor, confirma la declaración de origen de fondos.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-incomeStatement').innerText = '';
+		    }
+		    if (!form['declaration'].value.trim()) {
+		    	document.getElementById('error-declaration').innerText = 'Por favor, realiza tu declaración.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-declaration').innerText = '';
+		    }
+		    if (form['comments'].value.trim() === '') {
+		    	document.getElementById('error-comments').innerText = 'Por favor, agrega algún comentario si es necesario.';
+		        esValido = false;
+		    } else {
+		        document.getElementById('error-comments').innerText = '';
+		    }
+		        
+		    
+		    return true; // Todos los campos son válidos
+		}
 
+  	form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+    if (!validarFormulario()) {
+            return; // Detiene el proceso si la validación falla
+        }
     // Recopila los datos del formulario, excepto las referencias
     const formData = new FormData(form);
     const jsonObject = {};
@@ -507,15 +606,17 @@
       console.log('Success:', data);
       // Aquí puedes manejar una redirección o mostrar un mensaje de éxito
        window.location.href = 'pagina-de-confirmacion.html';
+
     })
     .catch((error) => {
       console.error('Error:', error);
       // Aquí puedes manejar errores
-    });
-  });
-});
+    	});
+	  });
+	});
 
 	</script>
+	
 </body>
 
 </html>
