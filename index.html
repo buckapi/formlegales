@@ -112,18 +112,18 @@
 												<div class="n-summary">
 													<span>¿Que tipo de cliente eres?</span>
 													<label>
-														<input type="radio" value="nuevo" name="clientType">
+														<input type="radio" value="nuevo" name="clientType" required>
 														<span class="checkmark">Nuevo</span>
 													</label>
 													<label>
-														<input type="radio" value="existente" name="clientType">
-														<span class="checkmark">Existente</span>
+														<input type="radio" value="existente" name="clientType" required>
+														<span class="checkmark" >Existente</span>
 													</label>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="wizard-form-input position-relative form-group has-float-label mt-0 n-select-option">
-													<select id="serviceType" name="serviceType" class="form-control">
+													<select id="serviceType" name="serviceType" class="form-control" required>
 														<option value="">Seleccione el tipo de servicio</option>
 														<option value="Aplicacion servicio de garente inmobiliario">
 															Aplicacion servicio de garante inmobiliario</option>
@@ -139,21 +139,21 @@
 										</div>
 										
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" name="name" class="form-control" placeholder="Nombre completo">
+											<input type="text" name="name" class="form-control" placeholder="Nombre completo"required>
 											<label>Nombre completo</label>
 										</div>
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+											<input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
 											<label>Correo electrónico</label>
 										</div>
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" class="form-control" name="phone" placeholder="Telefono">
+											<input type="text" class="form-control" name="phone" placeholder="Telefono" required pattern="[0-9]+">
 											<label>Telefóno</label>
 										</div>
 										<div class="row">
 											<div class="col-md-12">
 												<div class="wizard-form-input position-relative form-group has-float-label mt-0 n-select-option">
-													<select id="identityType" name="identityType" class="form-control">
+													<select id="identityType" name="identityType" class="form-control" required>
 														<option value="">Seleccione el tipo de documento</option>
 														<option value="Cedula de ciudadania">Cédula de ciudadanía
 														</option>
@@ -164,14 +164,14 @@
 											<div class="col-md-6">
 												<div class="wizard-form-input position-relative form-group has-float-label">
 													<div class="wizard-form-input position-relative form-group has-float-label">
-													<input type="text" class="form-control" name="documentNumber" placeholder="Numero de documento">
+													<input type="text" class="form-control" name="documentNumber" placeholder="Numero de documento" required>
 													<label>Numero de documento</label>
 												</div>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="wizard-form-input position-relative form-group has-float-label">
-													<input type="text" class="form-control" name="expeditionPlace" placeholder="Lugar de expedición">
+													<input type="text" class="form-control" name="expeditionPlace" placeholder="Lugar de expedición" required>
 													<label>Lugar de expedición</label>
 												</div>
 											</div>
@@ -219,8 +219,7 @@
 												<div class="upload-option text-center">
 													<label for="file-images">Carga de archivos</label>
 													<input id="file-images" style="visibility:hidden; display: none;" type="file">
-													<span>.jpg or .pdf should
-													be more than 500KB or 300PI</span>
+													<span>.jpg </span>
 												</div>
 											</div>
 										</div>
@@ -265,7 +264,7 @@
 									<div class="row">
 										<div class="col-md-12 wizard-identity wizard-content-form">
 												<h4 style="padding-bottom: 20px;">Conozcamonos mejor. Cuentenos una breve descripción de su actividad laboral o trabajo,  cual es el calculo de sus ingresos mensuales y por cuanto tiempo se dedica a esto.</h4>
-												<input type="text" class="form-control" name="labor" placeholder="Escriba aqui" style="height: 100px;">
+												<input type="text" class="form-control" name="labor" placeholder="Escriba aqui" style="height: 100px;" required>
 										</div>
 									</div>
 								</div>
@@ -282,7 +281,7 @@
 											<div class="taxable-area">
 												<div class="row">
 														<label>
-															<input type="checkbox" class="tax-check" checked value="incomeStatement" name="incomeStatement">
+															<input type="checkbox" class="tax-check" checked value="incomeStatement" name="incomeStatement" required>
 															<span class="checkbo-box-border"></span>
 															<span class="texable-option">
 																Declaro bajo juramento
@@ -383,7 +382,7 @@
 								<div class="wizard-content-form">
 									<div class="wizard-form-field">		
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" name="comments" class="form-control" placeholder="Escriba aqui alguna pregunta o comentario">
+											<input type="text" name="comments" class="form-control" placeholder="Escriba aqui alguna pregunta o comentario"required>
 											<label>Escriba aqui alguna pregunta o comentario</label>
 										</div>
 									</div>
