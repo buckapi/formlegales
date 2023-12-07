@@ -14,6 +14,8 @@
 	<link href="assets/css/colors/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
 	<link href="assets/css/colors/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
 	<link href="assets/css/colors/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
+		<link href="https://unpkg.com/filepond/dist/filepond.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -92,9 +94,246 @@
 						</div>
 						<div class="multisteps-form__panel " data-animation="slideVert">
 							<div class="inner pb-100">
+									<div class="wizard-topper">
+										<div class="wizard-progress">
+											<span>2 of 6 Completedo</span>
+											<div class="progress">
+												<div class="progress-bar">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="wizard-content-item text-center">
+										<h2>Aplicación servicio  de garante | Legales</h2>
+										<p>Seleccione las respuestas correspondientes</p>
+									</div>
+									<div class="wizard-content-form">
+										<div class="wizard-form-field">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="n-summary">
+													    <span>¿Qué tipo de cliente eres?</span>
+													    <label>
+													        <input type="radio" id="clientType" value="nuevo" name="clientType" required 
+													               data-parsley-required 
+													               data-parsley-required-message="Por favor, selecciona un tipo de cliente">
+													        <span class="checkmark">Nuevo</span>
+													    </label>
+													    <label>
+													        <input type="radio" id="clientType" value="existente" name="clientType" required 
+													               data-parsley-required 
+													               data-parsley-required-message="Por favor, selecciona un tipo de cliente">
+													        <span class="checkmark">Existente</span>
+													    </label>
+													</div>
+
+												</div>
+												<div class="col-md-6">
+													<div class="wizard-form-input position-relative form-group has-float-label mt-0 n-select-option">
+														<select id="serviceType" name="serviceType" class="form-control" required data-parsley-required data-parsley-required-message="Por favor, seleccione un tipo de servicio">
+															<option value="">Seleccione el tipo de servicio</option>
+															<option value="Aplicacion servicio de garente inmobiliario">
+																Aplicacion servicio de garante inmobiliario</option>
+															<option value="Asesoría en civil">Asesoría en civil</option>
+															<option value="Asesoría en penal">Asesoría en penal</option>
+															<option value="Asesoría en inmobiliario">Asesoría en
+																inmobiliario</option>
+															<option value="Asesoría en alcoholemia">Asesoría en alcoholemia
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											
+											<div class="wizard-form-input position-relative form-group has-float-label">
+												<!-- <input type="text" name="name" class="form-control" placeholder="Nombre completo"> -->
+												<input type="text" name="name" class="form-control" id="nombreCompleto" required data-parsley-required data-parsley-minlength="3" placeholder="Nombre completo">
+
+												<label>Nombre completo</label>
+											</div>
+											<div class="wizard-form-input position-relative form-group has-float-label">
+												<input type="email" id="email" class="form-control" name="email" placeholder="Correo electrónico" required 
+							           data-parsley-required-message="Por favor, ingresa tu correo electrónico" 
+							           data-parsley-type="email" >
+												
+												<label>Correo electrónico</label>
+											</div>
+											<div class="wizard-form-input position-relative form-group has-float-label">
+											    <input type="text" id="phone" class="form-control" name="phone" placeholder="Teléfono" 
+											           required 
+											           data-parsley-required-message="Por favor, ingresa tu teléfono"
+											           data-parsley-pattern="^\+\d{1,3}\s?\d{4,14}$"
+											           data-parsley-pattern-message="Por favor, ingresa un número de teléfono válido con código de país, ejemplo: +573001111111">
+											    <label>Teléfono</label>
+											</div>
+											<div class="row">
+													<div class="col-md-12">
+														<div class="wizard-form-input position-relative form-group has-float-label mt-0 n-select-option">
+															<select id="identityType" name="identityType" class="form-control" required data-parsley-required data-parsley-required-message="Por favor, seleccione un tipo de documento">
+																<option value="">Seleccione el tipo de documento</option>
+																<option value="Cedula de ciudadania">Cédula de ciudadanía
+																</option>
+																<option value="Pasaporte">Pasaporte</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-6">
+														    <div class="wizard-form-input position-relative form-group has-float-label">
+															        <input type="text" id="documentNumber" class="form-control" name="documentNumber" placeholder="Número de documento" 
+															               required
+															               data-parsley-required-message="Por favor, ingresa el número de documento"
+															               data-parsley-type="digits"
+															               data-parsley-type-message="Por favor, ingresa solo dígitos en el número de documento">
+															        <label>Número de documento</label>
+															    </div>
+													</div>
+
+													<div class="col-md-6">
+														<div class="wizard-form-input position-relative form-group has-float-label">
+															<input type="text" id="expeditionPlace" class="form-control" name="expeditionPlace" required data-parsley-required data-parsley-minlength="3" placeholder="Lugar de expedición">
+															<label>Lugar de expedición</label>
+														</div>
+													</div>
+											</div>
+											<div class="wizard-footer">
+												<div class="wizard-imgbg">
+													<img src="assets/img/v3.png" alt="">
+												</div>
+												<div class="actions">
+													<ul>
+														<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+														<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="multisteps-form__panel" data-animation="slideVert">
+							<div class="inner pb-100">
 								<div class="wizard-topper">
 									<div class="wizard-progress">
-										<span>2 of 6 Completedo</span>
+										<span>3 of 6 Completedo</span>
+										<div class="progress">
+											<div class="progress-bar" style="width: 65%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>Documento de identidad</h2>
+									<p>Cargue aquí su documento de identidad cedula de ciudadania o pasaporte que haya ingresado en el paso anterior.</p>
+								</div>
+								<div class="wizard-identity wizard-content-form">
+									<div class="row">
+										<div class="col-md-6">
+											<!-- <div class="wizard-identity-box identity-upload text-center">
+												<div class="upload-icon">
+													<i class="fas fa-cloud-upload-alt"></i>
+												</div>
+												<div class="upload-option text-center">
+													<label for="file-images">Carga de archivos</label>
+													<input id="file-images" style="visibility:hidden; display: none;" type="file">
+													<span>.jpg or .pdf should
+													be more than 500KB or 300PI</span>
+												</div>
+											</div> -->
+											<input type="file" class="filepond" name="filepond">
+										</div>
+										<div class="col-md-6">
+											<div class="wizard-identity-box text-center">
+												<div class="wizard-identity-icon">
+													<img src="assets/img/vi1.png" alt="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="wizard-footer">
+									<div class="wizard-imgbg">
+										<img src="assets/img/v3.png" alt="">
+									</div>
+									<div class="actions">
+										<ul>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="multisteps-form__panel" data-animation="slideVert">
+							<div class="inner pb-100">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>4 of 6 Completedo</span>
+										<div class="progress">
+											<div class="progress-bar" style="width: 65%;"></div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>Información laboral</h2>
+									
+								</div>
+								<div class="wizard-identity wizard-content-form">
+									<div class="row">
+										<div class="col-md-12 wizard-identity wizard-content-form">
+												<h4 style="padding-bottom: 20px;">Conozcamonos mejor. Cuentenos una breve descripción de su actividad laboral o trabajo,  cual es el calculo de sus ingresos mensuales y por cuanto tiempo se dedica a esto.</h4>
+												<input type="text" class="form-control" name="labor" id="labor" placeholder="Escriba aquí su actividad laboral" 
+									       required 
+									       data-parsley-required-message="Por favor, describe tu actividad laboral"
+									       data-parsley-minlength="20"
+									       data-parsley-minlength-message="La descripción debe tener al menos 20 caracteres"
+									       style="height: 100px;">
+
+										</div>
+									</div>
+								</div>
+								<div class="wizard-identity wizard-content-form" style="padding-top: 25px">
+									<div class="row">
+										<div class="col-md-12 wizard-identity wizard-content-form">
+											<h2 style="text-align: center;">DECLARACIÓN DE ORIGEN DE FONDOS</h2>
+										</div>
+										<div class="wizard-identity wizard-content-form">
+											<h3>Las partes aquí  declaran bajo la gravedad del juramento que sus ingresos provienen de actividades licitas, que no se encuentran con registro negativo en listados de prevención de lavado de activos nacionales o internacionales, que no se encuentran dentro de una de las dos categorías de lavado de activos (conversión o movimiento) y que, en consecuencia, se obligan a responder a la otra parte por todos los perjuicios que se llegaren a causar como consecuencia de esta afirmación. En igual sentido responderá ante terceros. Declaran igualmente, que sus conductas se ajustan a la ley y a la ética. 
+											</h3>
+										</div> 
+										<div class="col-md-12 wizard-identity wizard-content-form" style="padding-top:25px; text-align: right;">
+										    <div class="taxable-area">
+										        <div class="row">
+										            <label>
+										                <input type="checkbox" class="tax-check" value="incomeStatement" name="incomeStatement" id="incomeStatement" 
+										                       required
+										                       data-parsley-required-message="Debes marcar esta casilla para continuar">
+										                <span class="checkbox-box-border"></span>
+										                <span class="taxable-option">Declaro bajo juramento</span>
+										            </label>
+										        </div>
+										    </div>
+										</div>
+
+									</div>
+								</div>
+								<div class="wizard-footer">
+									<div class="wizard-imgbg">
+										<img src="assets/img/v3.png" alt="">
+									</div>
+									<div class="actions">
+										<ul>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="multisteps-form__panel " data-animation="slideVert">
+							<div class="inner pb-100">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>5 of 6 Completedo</span>
 										<div class="progress">
 											<div class="progress-bar">
 											</div>
@@ -102,19 +341,90 @@
 									</div>
 								</div>
 								<div class="wizard-content-item text-center">
-									<h2>Aplicación servicio  de garante | Legales</h2>
-									<p>Seleccione las respuestas correspondientes</p>
+									<h2>Referencias personales</h2>
+									<p>Ingrese 3 referencias</p>
+								</div>
+								<div class="wizard-content-form" id="referenceFields">
+									<div class="wizard-form-input position-relative form-group has-float-label">
+											
+																			
+										<!-- aqui van los campos del script| -->
+									</div>
+								</div>
+								
+										<!-- <button type="button" id="addReferenceButton" style="top:"><span class="button" >Referencia <i class="fa fa-plus"></i></span></button> -->
+									
+
+
+								<div class="wizard-footer">
+									<div class="wizard-imgbg">
+										<img src="assets/img/v3.png" alt="">
+									</div>
+									<div class="actions">
+										<ul>
+											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
+											<li><span class="js-btn-next" title="Sig">Sig <i class="fa fa-arrow-right"></i></span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="multisteps-form__panel " data-animation="slideVert">
+							<div class="inner pb-100">
+								<div class="wizard-topper">
+									<div class="wizard-progress">
+										<span>6 of 6 Completedo</span>
+										<div class="progress">
+											<div class="progress-bar">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wizard-content-item text-center">
+									<h2>Declaración y comentarios</h2>
+									
+								</div>
+								<div class="wizard-identity wizard-content-form">
+									<div class="row">
+										<div class="col-md-12 wizard-identity wizard-content-form">
+												<h4 style="padding-bottom: 20px;">El suministro de información falsa en la presente solicitud incurre en el delito de falsedad en documento privado de acuerdo con los artículos 289 y 290 del C.P.C.</h4>
+										
+										</div>
+									</div>
+								</div>
+								<div class="badge-selection">
+										<label>
+											<input type="radio" checked="checked" value="yes" id="declaration" name="declaration" required data-parsley-required 				               data-parsley-required-message="Por favor, seleccione si o no">
+											<span class="checkmark">SI</span>
+										</label>
+										<label>
+											<input type="radio" value="no" id="declaration" name="declaration" required data-parsley-required 											               data-parsley-required-message="Por favor, seleccione si o no">
+											<span class="checkmark">NO</span>
+										</label>
+								</div>
+
+								<div class="wizard-content-item text-center">
+									<h2>Inquietudes</h2>
+									
 								</div>
 								<div class="wizard-content-form">
-									<div class="wizard-form-field">
-										
-										
+									<div class="wizard-form-field">		
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<!-- <input type="text" name="name" class="form-control" placeholder="Nombre completo"> -->
-											<input type="text" name="name" class="form-control" id="nombreCompleto" required data-parsley-required data-parsley-minlength="3" placeholder="Nombre completo">
-
-											<label>Nombre completo</label>
+										
+											<input type="text" class="form-control" name="comments" id="comments" placeholder="Escriba aqui alguna pregunta o comentario" 
+									       required 
+									       data-parsley-required-message="Por favor, describe tu actividad laboral"
+									       data-parsley-minlength="20"
+									       data-parsley-minlength-message="La descripción debe tener al menos 20 caracteres"
+									       style="height: 100px;">
+											<label>Escriba aqui alguna pregunta o comentario</label>
 										</div>
+									</div>
+								</div>
+								<div class="wizard-footer">
+									<div class="wizard-imgbg">
+										<img src="assets/img/v3.png" alt="">
+									</div>
 									<div class="actions">
 										<ul>
 											<li><span class="js-btn-prev" title="Atras"><i class="fa fa-arrow-left"></i> Atras</span></li>
@@ -138,8 +448,18 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/switch.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-		
+	<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+	<!-- include FilePond library -->
+	<script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+
+	<!-- include FilePond plugins -->
+	<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+
+	<!-- include FilePond jQuery adapter -->
+	<script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+
+	<script>	
 
 		$("#files").change(function() {
 			filename = this.files[0].name
@@ -278,6 +598,10 @@ $(document).ready(function() {
 });
 
 </script>
+<script>
+    // Activar FilePond en todos los elementos con clase 'filepond'
+    FilePond.parse(document.body);
+	</script>
 </body>
 
 </html>
