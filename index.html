@@ -110,8 +110,9 @@
 										
 										
 										<div class="wizard-form-input position-relative form-group has-float-label">
-											<input type="text" name="name" class="form-control" placeholder="Nombre completo">
-											
+											<!-- <input type="text" name="name" class="form-control" placeholder="Nombre completo"> -->
+											<input type="text" name="name" class="form-control" id="nombreCompleto" required data-parsley-required data-parsley-minlength="3" placeholder="Nombre completo">
+
 											<label>Nombre completo</label>
 										</div>
 									<div class="actions">
@@ -130,11 +131,16 @@
 
 	</div>
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/i18n/es.js"></script>
+	
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/switch.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
+		
+
 		$("#files").change(function() {
 			filename = this.files[0].name
 			console.log(filename);
@@ -189,72 +195,89 @@
 		
 	</script>
 	<script>
-	document.addEventListener('DOMContentLoaded', function () {
-  	const form = document.getElementById('wizard');
-  
-  	
+		$(document).ready(function() {
+		  // Inicializa Parsley para tu formulario
+		  $('#wizard').parsley();
+	  
+		  // Manejador para el evento de envío del formulario
+		  $('#wizard').on('submit', function(e) {
+			e.preventDefault(); // Previene el envío por defecto
+	  
+			// Verifica si el formulario es válido utilizando Parsley
+			if ($(this).parsley().isValid()) {
+			  // Si el formulario es válido, procede con la recopilación y envío de datos
+	  
+			  // Recopila los datos del formulario, excepto las referencias
+			  const formData = new FormData(this);
+			  const jsonObject = {};
+	  
+			  for (const [key, value] of formData.entries()) {
+				if (!key.startsWith("reference")) {
+				  jsonObject[key] = value;
+				}
+			  }
+	  
+			  // Construir el array de referencias personales
+			  const references = [];
+			  const referenceNames = formData.getAll('referenceName[]');
+			  const referencePhones = formData.getAll('referencePhone[]');
+			  const referenceEmails = formData.getAll('referenceEmail[]');
+			  const referenceAddresses = formData.getAll('referenceAddress[]');
+	  
+			  for (let i = 0; i < referenceNames.length; i++) {
+				references.push({
+				  name: referenceNames[i],
+				  phone: referencePhones[i],
+				  email: referenceEmails[i],
+				  address: referenceAddresses[i]
+				});
+			  }
+	  
+			  // Agrega las referencias al objeto JSON principal
+			  jsonObject['references'] = references;
+	  
+			  // Convierte los datos del formulario en una cadena JSON
+			  const jsonPayload = JSON.stringify(jsonObject);
+	  
+			  // Realiza la solicitud POST
+			  fetch('https://db.buckapi.com:8085/api/collections/requests/records', {
+				method: 'POST',
+				headers: {
+				  'Content-Type': 'application/json'
+				  // Si necesitas autenticación, aquí deberías agregar tu token de acceso
+				  // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+				},
+				body: jsonPayload
+			  })
+			  .then(response => response.json())
+			  .then(data => {
+				console.log('Success:', data);
+				// Manejar una redirección o mostrar un mensaje de éxito
+				window.location.href = 'pagina-de-confirmacion.html';
+			  })
+			  .catch((error) => {
+				console.error('Error:', error);
+				// Manejar errores aquí
+			  });
+			} else {
+			  // Si el formulario no es válido, Parsley mostrará automáticamente los mensajes de error
+			  // Aquí puedes agregar cualquier manejo adicional para formularios inválidos si lo necesitas
+			}
+		  });
+		});
+	  </script>
+	  
+	<!-- <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script> -->
+<script>
+$(document).ready(function() {
+  // Configura Parsley para usar español
+  Parsley.setLocale('es');
 
-  	form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
-    
-    // Recopila los datos del formulario, excepto las referencias
-    const formData = new FormData(form);
-    const jsonObject = {};
+  // Inicializa Parsley en tu formulario
+  $('#wizard').parsley();
+});
 
-    for (const [key, value]  of formData.entries()) {
-      if (!key.startsWith("reference")) {
-        jsonObject[key] = value;
-      }
-    }
-
-    // Construir el array de referencias personales
-    const references = [];
-    const referenceNames = formData.getAll('referenceName[]');
-    const referencePhones = formData.getAll('referencePhone[]');
-    const referenceEmails = formData.getAll('referenceEmail[]');
-    const referenceAddresses = formData.getAll('referenceAddress[]');
-
-    for (let i = 0; i < referenceNames.length; i++) {
-      references.push({
-        name: referenceNames[i],
-        phone: referencePhones[i],
-        email: referenceEmails[i],
-        address: referenceAddresses[i]
-      });
-    }
-
-    // Agrega las referencias al objeto JSON principal
-    jsonObject['references'] = references;
-
-    // Convierte los datos del formulario en una cadena JSON
-    const jsonPayload = JSON.stringify(jsonObject);
-
-    // Realiza la solicitud POST a PocketBase
-    fetch('https://db.buckapi.com:8085/api/collections/requests/records', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-        // Si necesitas autenticación, aquí deberías agregar tu token de acceso
-        // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-      },
-      body: jsonPayload
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-      // Aquí puedes manejar una redirección o mostrar un mensaje de éxito
-       window.location.href = 'pagina-de-confirmacion.html';
-
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      // Aquí puedes manejar errores
-    	});
-	  });
-	});
-
-	</script>
-	
+</script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+
 $(function() {
     $('.wizard > .steps li a').click(function() {
         $(this).parent().addClass('checked');
