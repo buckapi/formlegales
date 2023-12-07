@@ -1725,6 +1725,13 @@ select.form-control option[value=""][disabled] {
     }
 }
 
+#wizard-identity-icon img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
 
 
 /*---------------------------------------------------- */
