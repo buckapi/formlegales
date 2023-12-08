@@ -1,0 +1,72 @@
+<script>
+		$(document).ready(function() {
+		  // Inicializa Parsley para tu formulario
+		  $('#wizard').parsley();
+	  
+		  // Manejador para el evento de envío del formulario
+		  $('#wizard').on('submit', function(e) {
+			e.preventDefault(); // Previene el envío por defecto
+	  
+			// Verifica si el formulario es válido utilizando Parsley
+			if ($(this).parsley().isValid()) {
+			  // Si el formulario es válido, procede con la recopilación y envío de datos
+	  
+			  // Recopila los datos del formulario, excepto las referencias
+			  const formData = new FormData(this);
+			  const jsonObject = {};
+	  
+			  for (const [key, value] of formData.entries()) {
+				if (!key.startsWith("reference")) {
+				  jsonObject[key] = value;
+				}
+			  }
+	  
+			  // Construir el array de referencias personales
+			  const references = [];
+			  const referenceNames = formData.getAll('referenceName[]');
+			  const referencePhones = formData.getAll('referencePhone[]');
+			  const referenceEmails = formData.getAll('referenceEmail[]');
+			  const referenceAddresses = formData.getAll('referenceAddress[]');
+	  
+			  for (let i = 0; i < referenceNames.length; i++) {
+				references.push({
+				  name: referenceNames[i],
+				  phone: referencePhones[i],
+				  email: referenceEmails[i],
+				  address: referenceAddresses[i]
+				});
+			  }
+	  
+			  // Agrega las referencias al objeto JSON principal
+			  jsonObject['references'] = references;
+	  
+			  // Convierte los datos del formulario en una cadena JSON
+			  const jsonPayload = JSON.stringify(jsonObject);
+	  
+			  // Realiza la solicitud POST
+			  fetch('https://db.buckapi.com:8085/api/collections/requests/records', {
+				method: 'POST',
+				headers: {
+				  'Content-Type': 'application/json'
+				  // Si necesitas autenticación, aquí deberías agregar tu token de acceso
+				  // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+				},
+				body: jsonPayload
+			  })
+			  .then(response => response.json())
+			  .then(data => {
+				console.log('Success:', data);
+				// Manejar una redirección o mostrar un mensaje de éxito
+				window.location.href = 'pagina-de-confirmacion.html';
+			  })
+			  .catch((error) => {
+				console.error('Error:', error);
+				// Manejar errores aquí
+			  });
+			} else {
+			  // Si el formulario no es válido, Parsley mostrará automáticamente los mensajes de error
+			  // Aquí puedes agregar cualquier manejo adicional para formularios inválidos si lo necesitas
+			}
+		  });
+		});
+	  </script>

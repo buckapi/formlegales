@@ -90,7 +90,7 @@ button {
   cursor: pointer;
  
     background-color: #ddeef9;
-    padding: 10px;
+    /* padding: 10px; */
     
     margin-bottom: 10px;
 }
@@ -298,10 +298,10 @@ h6 {
 .form-control {
   height: 37px;
   border: none;
-  border-bottom: 2px solid #2f3146;
+  border-bottom: 2px solid #e9e0cf;
   width: 100%;
   color: #666;
-  background-color: #bfb26cd1;
+  background-color: #bfb36c25;
 }
 .form-control:focus {
   border-color: #e9e0cf;
@@ -343,6 +343,7 @@ select.form-control option[value=""][disabled] {
   text-align: center;
   background-color: #13263e;
   border: 2px solid #13263e;
+  border-radius: 17px;;
   cursor: pointer;
 }
 .actions li span i,
@@ -353,7 +354,7 @@ select.form-control option[value=""][disabled] {
   color: #132640;
   background-color: #d3d3d600;
   border-color: #182651;
-  border-radius: 3px;
+  border-radius: 17px;
 }
 .actions li:first-child span i, .actions li:first-child button i {
   left: -45px;
@@ -999,7 +1000,7 @@ select.form-control option[value=""][disabled] {
 
 .wizard-content-item {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 95%;
   padding-top: 5px;
   padding-bottom: 20px;
 }
@@ -1031,8 +1032,8 @@ select.form-control option[value=""][disabled] {
   -webkit-transition: 0.3s all ease-out;
   -o-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
-  background-color: #bfb26cb8;
-  border: 2px solid #13263e;
+  background-color: #bfb26c4d;
+  border: 2px solid #bfb26c4d;
 }
 .wizard-form-field input:focus, .wizard-form-field select:focus {
   border: 2px solid #13263e;
@@ -1053,7 +1054,7 @@ select.form-control option[value=""][disabled] {
 }
 
 .wizard-imgbg {
-  left: -20px;
+  left: 28px;
   bottom: 30px;
   position: absolute;
 }
@@ -1401,8 +1402,8 @@ select.form-control option[value=""][disabled] {
   font-size: 15px;
   font-weight: 500;
   padding-left: 30px;
-  border: 2px solid #13263e;
-  background-color: #bfb26cb8;
+  border: 2px solid #bfb26c4d;
+  background-color: #bfb26c4d;
   -webkit-appearance: none;
 }
 .n-select-option:after {
