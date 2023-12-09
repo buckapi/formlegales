@@ -159,7 +159,7 @@
 												<label>Correo electrónico</label>
 											</div>
 											<div class="wizard-form-input position-relative form-group has-float-label">
-											    <input type="text" id="phone" class="form-control" name="phone" placeholder="Teléfono" 
+											    <input type="text" id="phone" class="form-control" name="phone" placeholder="Escriba su teléfono con el codigo de su país, ejemplo: +573001111111" 
 											           required 
 											           data-parsley-required-message="Por favor, ingresa tu teléfono"
 											           data-parsley-pattern="^\+\d{1,3}\s?\d{4,14}$"
@@ -173,6 +173,7 @@
 																<option value="">Seleccione el tipo de documento</option>
 																<option value="Cedula de ciudadania">Cédula de ciudadanía
 																</option>
+																<option value="Cédula extranjera">Cédula de extranjeria</option>
 																<option value="Pasaporte">Pasaporte</option>
 															</select>
 														</div>
@@ -394,13 +395,13 @@
 								</div>
 								<div class="badge-selection">
 										<label>
-											<input type="radio" checked="checked" value="yes" id="declaration" name="declaration" required data-parsley-required 				               data-parsley-required-message="Por favor, seleccione si o no">
-											<span class="checkmark">SI</span>
+											<input type="radio" checked="checked" value="Acepto" id="declaration" name="declaration" required data-parsley-required 				               data-parsley-required-message="Por favor, seleccione si o no">
+											<span class="checkmark">Acepto</span>
 										</label>
-										<label>
+										<!-- <label>
 											<input type="radio" value="no" id="declaration" name="declaration" required data-parsley-required 											               data-parsley-required-message="Por favor, seleccione si o no">
 											<span class="checkmark">NO</span>
-										</label>
+										</label> -->
 								</div>
 
 								<div class="wizard-content-item text-center">
@@ -414,8 +415,8 @@
 											<input type="text" class="form-control" name="comments" id="comments" placeholder="Escriba aqui alguna pregunta o comentario" 
 									       required 
 									       data-parsley-required-message="Por favor, describe tu actividad laboral"
-									       data-parsley-minlength="20"
-									       data-parsley-minlength-message="La descripción debe tener al menos 20 caracteres"
+									       data-parsley-minlength="10"
+									       data-parsley-minlength-message="La descripción debe tener al menos 10 caracteres"
 									       style="height: 100px;">
 											<label>Escriba aqui alguna pregunta o comentario</label>
 										</div>
