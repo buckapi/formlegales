@@ -105,14 +105,14 @@
 									</div>
 									<div class="wizard-content-item text-center">
 										<h2>Aplicación servicio  de garante | Legales</h2>
-										<p>Seleccione las respuestas correspondientes</p>
+										<p>Seleccione las respuestas correspondientes, por favor indicar cada casilla para ser enviado correctamente!!</p>
 									</div>
 									<div class="wizard-content-form">
 										<div class="wizard-form-field">
 											<div class="row">
 												<div class="col-md-6">
 													<div class="n-summary">
-													    <span>¿Qué tipo de cliente eres?</span>
+													    <span>*¿Qué tipo de cliente eres?</span>
 													    <label>
 													        <input type="radio" id="clientType" value="nuevo" name="clientType" required 
 													               data-parsley-required 
@@ -131,7 +131,7 @@
 												<div class="col-md-6">
 													<div class="wizard-form-input position-relative form-group has-float-label mt-0 n-select-option">
 														<select id="serviceType" name="serviceType" class="form-control" required data-parsley-required data-parsley-required-message="Por favor, seleccione un tipo de servicio">
-															<option value="">Seleccione el tipo de servicio</option>
+															<option value="">* Seleccione el tipo de servicio</option>
 															<option value="Aplicacion servicio de garente inmobiliario">
 																Aplicacion servicio de garante inmobiliario</option>
 															<option value="Asesoría en civil">Asesoría en civil</option>
@@ -149,14 +149,14 @@
 												<!-- <input type="text" name="name" class="form-control" placeholder="Nombre completo"> -->
 												<input type="text" name="name" class="form-control" id="nombreCompleto" required data-parsley-required data-parsley-minlength="3" placeholder="Nombre completo">
 
-												<label>Nombre completo</label>
+												<label>* Nombre completo</label>
 											</div>
 											<div class="wizard-form-input position-relative form-group has-float-label">
 												<input type="email" id="email" class="form-control" name="email" placeholder="Correo electrónico" required 
 							           data-parsley-required-message="Por favor, ingresa tu correo electrónico" 
 							           data-parsley-type="email" >
 												
-												<label>Correo electrónico</label>
+												<label>* Correo electrónico</label>
 											</div>
 											<div class="wizard-form-input position-relative form-group has-float-label">
 											    <input type="text" id="phone" class="form-control" name="phone" placeholder="Escriba su teléfono con el codigo de su país, ejemplo: +573001111111" 
@@ -164,13 +164,13 @@
 											           data-parsley-required-message="Por favor, ingresa tu teléfono"
 											           data-parsley-pattern="^\+\d{1,3}\s?\d{4,14}$"
 											           data-parsley-pattern-message="Por favor, ingresa un número de teléfono válido con código de país, ejemplo: +573001111111">
-											    <label>Teléfono</label>
+											    <label>* Teléfono</label>
 											</div>
 											<div class="row">
 													<div class="col-md-12">
 														<div class="wizard-form-input position-relative form-group has-float-label mt-0 n-select-option">
 															<select id="identityType" name="identityType" class="form-control" required data-parsley-required data-parsley-required-message="Por favor, seleccione un tipo de documento">
-																<option value="">Seleccione el tipo de documento</option>
+																<option value="">* Seleccione el tipo de documento</option>
 																<option value="Cedula de ciudadania">Cédula de ciudadanía
 																</option>
 																<option value="Cédula extranjera">Cédula de extranjeria</option>
@@ -180,25 +180,25 @@
 													</div>
 													<div class="col-md-6">
 														    <div class="wizard-form-input position-relative form-group has-float-label">
-															        <input type="text" id="documentNumber" class="form-control" name="documentNumber" placeholder="Número de documento" 
+															        <input type="text" id="documentNumber" class="form-control" name="documentNumber" placeholder="* Número de documento" 
 															               required
 															               data-parsley-required-message="Por favor, ingresa el número de documento"
 															               data-parsley-type="digits"
-															               data-parsley-type-message="Por favor, ingresa solo dígitos en el número de documento">
-															        <label>Número de documento</label>
+															               data-parsley-type-message=" Por favor, ingresa solo dígitos en el número de documento">
+															        <label>* Número de documento</label>
 															    </div>
 													</div>
 
 													<div class="col-md-6">
 														<div class="wizard-form-input position-relative form-group has-float-label">
-															<input type="text" id="expeditionPlace" class="form-control" name="expeditionPlace" required data-parsley-required data-parsley-minlength="3" placeholder="Lugar de expedición">
-															<label>Lugar de expedición</label>
+															<input type="text" id="expeditionPlace" class="form-control" name="expeditionPlace" required data-parsley-required data-parsley-minlength="3" placeholder="* Lugar de expedición">
+															<label>* Lugar de expedición</label>
 														</div>
 													</div>
 													<div class="col-md-12">
 														<div class="wizard-form-input position-relative form-group has-float-label">
-															<input type="text" id="rrss" class="form-control" name="rrss" required data-parsley-required data-parsley-minlength="3" placeholder="Link de redes sociales - facebook o instagram">
-															<label>Link de redes sociales</label>
+															<input type="text" id="rrss" class="form-control" name="rrss" required data-parsley-required data-parsley-minlength="3" placeholder="* Link de redes sociales - facebook o instagram">
+															<label>* Link de redes sociales</label>
 														</div>
 													</div>
 											</div>
@@ -288,11 +288,11 @@
 									<div class="row">
 										<div class="col-md-12 wizard-identity wizard-content-form">
 												<h4 style="padding-bottom: 20px;">Información para servicio de garante informacion de su trabajo/ para procesos legales hechos relevantes del proceso. Cuentenos un breve relato sobre los hechos relevates de su caso, ciudad y fecha de los hechos, solicito audiencia?</h4>
-												<input type="text" class="form-control" name="labor" id="labor" placeholder="Escriba aquí su actividad laboral" 
+												<input type="text" class="form-control" name="labor" id="labor" placeholder="* Escriba aquí su actividad laboral" 
 									       required 
-									       data-parsley-required-message="Por favor, describe tu actividad laboral"
-									       data-parsley-minlength="20"
-									       data-parsley-minlength-message="La descripción debe tener al menos 20 caracteres"
+									       data-parsley-required-message="* Por favor, describe tu actividad laboral"
+									       data-parsley-minlength="10"
+									       data-parsley-minlength-message="La descripción debe tener al menos 10 caracteres"
 									       style="height: 100px;">
 
 										</div>
@@ -315,7 +315,7 @@
 										                       required
 										                       data-parsley-required-message="Debes marcar esta casilla para continuar">
 										                <span class="checkbox-box-border"></span>
-										                <span class="taxable-option">Declaro bajo juramento</span>
+										                <span class="taxable-option">* Declaro bajo juramento</span>
 										            </label>
 										        </div>
 										    </div>
@@ -402,7 +402,7 @@
 								<div class="badge-selection">
 										<label>
 											<input type="radio" checked="checked" value="Acepto" id="declaration" name="declaration" required data-parsley-required 				               data-parsley-required-message="Por favor, seleccione si o no">
-											<span class="checkmark">Acepto</span>
+											<span class="checkmark">* Acepto</span>
 										</label>
 										<!-- <label>
 											<input type="radio" value="no" id="declaration" name="declaration" required data-parsley-required 											               data-parsley-required-message="Por favor, seleccione si o no">
@@ -422,9 +422,9 @@
 									       required 
 									       data-parsley-required-message="Por favor, describe tu actividad laboral"
 									       data-parsley-minlength="10"
-									       data-parsley-minlength-message="La descripción debe tener al menos 10 caracteres"
+									       data-parsley-minlength-message="La descripción debe tener al menos 5 caracteres"
 									       style="height: 100px;">
-											<label>Escriba aqui alguna pregunta o comentario</label>
+											<label>* Escriba aqui alguna pregunta o comentario</label>
 										</div>
 									</div>
 								</div>
